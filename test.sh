@@ -1,6 +1,8 @@
 #!/bin/bash
 
-while IFS= read -r line; do
-    echo -ne "$line"
-    echo -e "$line" | ./solution
-done < $(grep -v -E '^#' "$1")
+while read -r INPUT ANSWER; do
+#    echo -e "${INPUT} ${ANSWER}"
+    TEST=$(echo -e "${INPUT}" | ./solution)
+#    echo -e $TEST
+    diff --unified=1 <( printf '%s\n' "$TEST" ) <( printf '%s\n' "$ANSWER" )
+done < "$1"
