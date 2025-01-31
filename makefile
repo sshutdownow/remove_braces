@@ -16,7 +16,7 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CXX) $(CFLAGS) $< -o $@
 
 test1:
-	$(EXECUTABLE) < test1.txt > output1.txt
+	./$(EXECUTABLE) < test1.txt > output1.txt
 	diff -u correct1.txt output1.tx
 
 test2:
