@@ -16,15 +16,15 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CXX) $(CFLAGS) $< -o $@
 
 test1:
-	./$(EXECUTABLE) < test1.txt > output1.txt
+	./$(EXECUTABLE) < test1.txt > output1.txt && \
 	diff -u correct1.txt output1.tx
 
 test2:
-	$(EXECUTABLE) < test2.txt > output2.txt
-	./diff -u correct2.txt output2.tx
+	./$(EXECUTABLE) < test2.txt > output2.txt && \
+	diff -u correct2.txt output2.tx
 
 test3:
-	$(EXECUTABLE) < test3.txt > output3.txt
-	./diff -u correct3.txt output3.tx
+	./$(EXECUTABLE) < test3.txt > output3.txt && \
+	diff -u correct3.txt output3.tx
 
 test: all test1 test2 test3
