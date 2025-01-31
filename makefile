@@ -5,6 +5,8 @@ SOURCES=solution.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=solution
 
+.PHONY: all clean distclean check test test1 test2 test3
+
 all: $(SOURCES) $(EXECUTABLE)
 	
 $(EXECUTABLE): $(OBJECTS) 
