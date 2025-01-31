@@ -1,5 +1,5 @@
 #CC=g++
-CFLAGS=-c -Wall
+CXXFLAGS=-W -Wall
 LDFLAGS=
 SOURCES=solution.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
