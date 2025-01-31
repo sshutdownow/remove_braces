@@ -8,7 +8,7 @@ EXECUTABLE=solution
 all: $(SOURCES) $(EXECUTABLE)
 	
 $(EXECUTABLE): $(OBJECTS) 
-	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+	$(CXX) $(LDFLAGS) $(OBJECTS) -o $@
 
 .cpp.o:
 	$(CXX) $(CFLAGS) $< -o $@
