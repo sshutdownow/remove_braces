@@ -16,6 +16,6 @@ jobs:
     - name: make
       run: make
     - name: make check
-      run: make check
+      run: ./test.sh tests.txt
     - name: make distcheck
       run: make distcheck
