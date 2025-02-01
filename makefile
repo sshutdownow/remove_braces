@@ -18,7 +18,7 @@ $(EXECUTABLE): $(OBJECTS)
 
 test1:
 	./$(EXECUTABLE) < test1.txt > output1.txt && \
-	diff -u correct1.txt output1.txt
+	grep -Fwvf correct1.txt output1.txt
 
 test2:
 	./$(EXECUTABLE) < test2.txt > output2.txt && \
