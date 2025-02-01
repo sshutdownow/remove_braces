@@ -29,3 +29,4 @@ test3:
 	diff -wu correct3.txt output3.txt
 
 test: all test1 test2 test3
+	@echo "Программа работает корректно"
