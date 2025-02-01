@@ -1,6 +1,7 @@
 #CC=g++
-CXXFLAGS=-c -Wall
-#LDFLAGS=
+CFLAGS=-c -Wall
+#CXXFLAGS=-w -Wall
+LDFLAGS=
 SOURCES=solution.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=solution
