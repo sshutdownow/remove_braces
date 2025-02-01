@@ -48,5 +48,4 @@ main(void) {
     std::cout <<  sz*1LL - burn_closed_braces(ops);
     
     return 0;
-
 }
