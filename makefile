@@ -18,14 +18,14 @@ $(EXECUTABLE): $(OBJECTS)
 
 test1:
 	./$(EXECUTABLE) < test1.txt > output1.txt && \
-	diff -u correct1.txt output1.tx
+	diff -u correct1.txt output1.txt
 
 test2:
 	./$(EXECUTABLE) < test2.txt > output2.txt && \
-	diff -u correct2.txt output2.tx
+	diff -u correct2.txt output2.txt
 
 test3:
 	./$(EXECUTABLE) < test3.txt > output3.txt && \
-	diff -u correct3.txt output3.tx
+	diff -u correct3.txt output3.txt
 
 test: all test1 test2 test3
