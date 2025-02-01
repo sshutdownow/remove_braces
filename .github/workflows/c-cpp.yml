@@ -15,8 +15,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: make
       run: make
-    - name: output
-      run: touch output1.txt output2.txt output1.txt
     - name: make check
       run: make test
 #    - name: make distcheck
