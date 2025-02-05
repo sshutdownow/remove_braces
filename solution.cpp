@@ -43,8 +43,7 @@ main(void) {
        }
     }
     
-    size_t sz = ops.size();
-    std::cout <<  sz - burn_closed_braces(ops);
+    std::cout << ops.size() - burn_closed_braces(ops);
     
     return 0;
 }
