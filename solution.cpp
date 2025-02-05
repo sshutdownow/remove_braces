@@ -2,18 +2,18 @@
 #include <stack>
 #include <string>
 
-long long
+size_t
 burn_closed_braces(std::stack<char> &ops) {
-    long long ans = 0LL;
+    size_t ans = 0;
 
     while (ops.size() >= 2) {
         char op = ops.top();
         ops.pop();
-      
-         // правильная скобочная последовательность
+
+        // правильная скобочная последовательность
         if (op == ')' && (op = ops.top()) == '(' ) {
             ops.pop();
-            ans += 2LL;
+            ans += 2;
         } else {
 
             long long n = burn_closed_braces(ops);
@@ -24,7 +24,6 @@ burn_closed_braces(std::stack<char> &ops) {
             ans += n;
         }
     }
-
     return ans;
 }
 
@@ -45,7 +44,7 @@ main(void) {
     }
     
     size_t sz = ops.size();
-    std::cout <<  sz*1LL - burn_closed_braces(ops);
+    std::cout <<  sz - burn_closed_braces(ops);
     
     return 0;
 }
