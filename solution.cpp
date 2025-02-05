@@ -9,14 +9,12 @@ burn_closed_braces(std::stack<char> &ops) {
     while (ops.size() >= 2) {
         char op = ops.top();
         ops.pop();
-
         // правильная скобочная последовательность
         if (op == ')' && (op = ops.top()) == '(' ) {
             ops.pop();
             ans += 2;
         } else {
-
-            long long n = burn_closed_braces(ops);
+            size_t n = burn_closed_braces(ops);
             ops.push(op);
             if (!n) {
                 break;
